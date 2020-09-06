@@ -8,6 +8,7 @@ import {
   CLEAR_USERS,
   GET_USER,
   GET_REPOS,
+  SET_ALERT,
 } from '../types';
 
 const GithubState = (props) => {
@@ -50,6 +51,18 @@ const GithubState = (props) => {
     });
   };
 
+  // Get users repos
+  const getUserRepos = async (username) => {
+    setLoading();
+    const res = await github.get(
+      `/users/${username}/repos?per_page=5&sort=created:asc`
+    );
+    dispatch({
+      type: GET_REPOS,
+      payload: res.data,
+    });
+  };
+
   // Clear Users
   const clearUsers = () =>
     dispatch({
@@ -73,6 +86,7 @@ const GithubState = (props) => {
         searchUsers,
         clearUsers,
         getUser,
+        getUserRepos,
       }}
     >
       {props.children}

@@ -31,6 +31,9 @@ File Structures and implement Context(29)
     - SEARCH_USERS
     - SET_LOADING
 
-  - Move Users state to context (31) to render Users from Search
+  - Move Users and User state to context (31) to render Users from Search
+
     - Create reducer and actions
       - GET_USER
+
+  - Move getUsers Repo and create Reducer and actions for that (32)
