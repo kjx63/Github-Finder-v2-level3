@@ -32,3 +32,5 @@ File Structures and implement Context(29)
     - SET_LOADING
 
   - Move Users state to context (31) to render Users from Search
+    - Create reducer and actions
+      - GET_USER

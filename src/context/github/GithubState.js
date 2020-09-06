@@ -39,6 +39,17 @@ const GithubState = (props) => {
     });
   };
 
+  // Get a User
+  const getUser = async (username) => {
+    setLoading();
+    const res = await github.get(`/users/${username}`);
+
+    dispatch({
+      type: GET_USER,
+      payload: res.data,
+    });
+  };
+
   // Clear Users
   const clearUsers = () =>
     dispatch({
@@ -61,6 +72,7 @@ const GithubState = (props) => {
         loading: state.loading,
         searchUsers,
         clearUsers,
+        getUser,
       }}
     >
       {props.children}
