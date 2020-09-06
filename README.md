@@ -37,3 +37,6 @@ File Structures and implement Context(29)
       - GET_USER
 
   - Move getUsers Repo and create Reducer and actions for that (32)
+
+  - Create a new Alert Context (33)
+    - Create Reducer and action for alert and setAlert function
