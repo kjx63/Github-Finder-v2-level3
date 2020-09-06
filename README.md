@@ -23,3 +23,5 @@ File Structures and implement Context(29)
       - return the Provider
     - githubReducer: function to decide what's goint to happen to your "state" based on your actions
   - types.js: variables of strings to call to change your state within your reducer
+
+  - Move App level state to context-level state
