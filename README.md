@@ -20,8 +20,12 @@ File Structures and implement Context(29)
     - githubContext: intiialze the new context
     - GithubState: all of the "actions" go here / initialState also goes here.
       - dispatch to the reducer by using useReducer hook
+        - Reducer: change the state of certain components when sth happens (30).
       - return the Provider
     - githubReducer: function to decide what's goint to happen to your "state" based on your actions
   - types.js: variables of strings to call to change your state within your reducer
 
-  - Move App level state to context-level state
+  - Move App level state to context-level state (30)
+  - Create reducer (change the state) and actions
+    - SEARCH_USERS
+    - SET_LOADING

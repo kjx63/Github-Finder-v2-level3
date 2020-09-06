@@ -24,16 +24,6 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState(null);
 
-  // Search Github Users
-  const searchUsers = async (text) => {
-    setLoading(true);
-
-    const res = await github.get(`/search/users?q=${text}`);
-
-    setUsers(res.data.items);
-    setLoading(false);
-  };
-
   // Get a User
   const getUser = async (username) => {
     setLoading(true);
@@ -80,7 +70,6 @@ const App = () => {
                 render={(props) => (
                   <Fragment>
                     <Search
-                      searchUsers={searchUsers}
                       clearUsers={clearUsers}
                       showClear={users.length > 0 ? true : false}
                       setAlert={showAlert}
