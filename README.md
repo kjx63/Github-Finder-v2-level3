@@ -27,5 +27,8 @@ File Structures and implement Context(29)
 
   - Move App level state to context-level state (30)
   - Create reducer (change the state) and actions
+
     - SEARCH_USERS
     - SET_LOADING
+
+  - Move Users state to context (31) to render Users from Search
