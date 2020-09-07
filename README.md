@@ -39,4 +39,7 @@ File Structures and implement Context(29)
   - Move getUsers Repo and create Reducer and actions for that (32)
 
   - Create a new Alert Context (33)
+
     - Create Reducer and action for alert and setAlert function
+
+  - Create the Home component which includes Search and User Component and Add page Not Found (34)
