@@ -8,7 +8,6 @@ import {
   CLEAR_USERS,
   GET_USER,
   GET_REPOS,
-  SET_ALERT,
 } from '../types';
 
 const GithubState = (props) => {
@@ -18,6 +17,15 @@ const GithubState = (props) => {
     repos: [],
     loading: false,
   };
+
+  let githubToken;
+
+  if (process.env.NODE_ENV !== 'production') {
+    //
+    githubToken = process.env.REACT_APP_GITHUB_TOKEN;
+  } else {
+    githubToken = process.env.githubToken;
+  }
 
   const github = axios.create({
     baseURL: 'https://api.github.com',

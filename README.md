@@ -12,34 +12,21 @@
 
 ### Features
 
-File Structures and implement Context(29)
+- File Structures and implement Context(29)
 
-- Context
+  - Context
 
-  - github
-    - githubContext: intiialze the new context
-    - GithubState: all of the "actions" go here / initialState also goes here.
-      - dispatch to the reducer by using useReducer hook
-        - Reducer: change the state of certain components when sth happens (30).
-      - return the Provider
-    - githubReducer: function to decide what's goint to happen to your "state" based on your actions
-  - types.js: variables of strings to call to change your state within your reducer
+    - github
+      - githubContext: intiialze the new context
+      - GithubState: all of the "actions" go here / initialState also goes here.
+        - dispatch to the reducer by using useReducer hook
+          - Reducer: change the state of certain components when sth happens (30).
+        - return the Provider
+      - githubReducer: function to decide what's goint to happen to your "state" based on your actions
+    - types.js: variables of strings to call to change your state within your reducer
 
-  - Move App level state to context-level state (30)
-  - Create reducer (change the state) and actions
-
-    - SEARCH_USERS
-    - SET_LOADING
-
-  - Move Users and User state to context (31) to render Users from Search
-
-    - Create reducer and actions
-      - GET_USER
-
-  - Move getUsers Repo and create Reducer and actions for that (32)
-
-  - Create a new Alert Context (33)
-
-    - Create Reducer and action for alert and setAlert function
-
-  - Create the Home component which includes Search and User Component and Add page Not Found (34)
+- Not Found Page
+- Deploy to Netlify
+  - Create a local and global github token
+    - local token stored in .env file
+    - global token stored in netlify
